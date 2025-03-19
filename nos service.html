@@ -19,13 +19,14 @@
             font-size: 24px;
             font-weight: bold;
             position: relative;
+            padding-left: 120px; /* Ensure space for the logo */
         }
         .logo {
             position: absolute;
             left: 15px;
             top: 5px;
             height: 100px;
-cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
         }
         nav {
             display: flex;
@@ -90,7 +91,7 @@ cursor: pointer; /* Add cursor pointer to indicate it's clickable */
             border: none;
             border-radius: 5px;
         }
-.email-button {
+        .email-button {
             background: #007bff;
             color: white;
             border: none;
@@ -214,13 +215,22 @@ cursor: pointer; /* Add cursor pointer to indicate it's clickable */
         .fullscreen-arrow.right {
             right: 10px;
         }
+        @media (max-width: 768px) {
+            header {
+                padding-left: 15px; /* Adjust padding for smaller screens */
+                padding-right: 15px; /* Ensure proper spacing */
+            }
+            .logo {
+                height: 80px; /* Adjust logo size for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-<a href="site internet cpl.html">
-        <img src="logo%20cpl.png" alt="Logo CPL Électrique" class="logo">
-</a>
+        <a href="site internet cpl.html">
+            <img src="logo%20cpl.png" alt="Logo CPL Électrique" class="logo">
+        </a>
         CPL Électrique Inc.
     </header>
     <nav>
@@ -232,17 +242,17 @@ cursor: pointer; /* Add cursor pointer to indicate it's clickable */
         <section id="services" class="services">
             <h2>Nos Services</h2>
             <p style="text-align: left; font-size: 20px;">Chez CPL Électrique Inc., nous croyons que l’électricité ne se résume pas seulement à des câbles et des interrupteurs : c’est un art qui alimente nos vies et façonne nos espaces. Passionnés par notre métier, nous nous engageons à offrir des services de qualité supérieure, dans la joie et le respect de nos clients.</p>
-               <p style="text-align: left;"><u>Installation électrique:</u></p>
-                 <p style="text-align: left;">Que ce soit pour une nouvelle construction ou une rénovation, nous assurons l’installation de vos systèmes électriques avec soin et précision. Nous travaillons avec des matériaux de haute qualité pour garantir une installation durable et sécuritaire, en respectant les normes les plus strictes.</p> 
-                 <p style="text-align: left;"><u>Maintenance et dépannage:</u></p>
-                 <p style="text-align: left;">Des pannes imprévues ? Pas de panique ! Nos électriciens sont là pour vous aider. Nous proposons des services de dépannage rapide et efficace, en veillant à ce que votre système électrique fonctionne parfaitement, que ce soit pour une maison ou une entreprise. Nous intervenons dans les plus brefs délais avec le sourire !</p>
-                 <p style="text-align: left;"><u>Mise aux normes:</u></p>
-                 <p style="text-align: left;">La sécurité de votre installation est primordiale. Nous offrons un service de mise aux normes pour s’assurer que votre installation électrique respecte les standards en vigueur, vous garantissant ainsi une protection optimale pour vous et vos proches.</p>
-                 <p style="text-align: left;"><u> Éclairage extérieur et décoration lumineuse :</u></p>
-                 <p style="text-align: left;">Apportez de l’ambiance à vos extérieurs grâce à notre expertise en éclairage extérieur. Nous concevons des solutions lumineuses créatives et écoénergétiques pour sublimer votre jardin, terrasse ou façade, tout en réduisant votre empreinte énergétique.</p>
-                 <p style="text-align: left;"><u>Conseil et expertise personnalisée:</u></p>
-                 <p style="text-align: left;">Chez CPL Électrique Inc., chaque projet est unique ! Nous vous offrons des conseils personnalisés pour optimiser vos installations électriques, améliorer votre consommation d’énergie et répondre à vos besoins spécifiques.</p>
-                 <p style="text-align: left; font-size: 20px;">Notre équipe joyeuse et enthousiaste est prête à vous accompagner dans tous vos projets électriques, en apportant des solutions sur mesure et en vous assurant une expérience agréable et fiable. Nous faisons de chaque intervention une occasion de montrer notre amour pour notre métier, et cela se reflète dans la qualité de notre travail.</p>
+            <p style="text-align: left;"><u>Installation électrique:</u></p>
+            <p style="text-align: left;">Que ce soit pour une nouvelle construction ou une rénovation, nous assurons l’installation de vos systèmes électriques avec soin et précision. Nous travaillons avec des matériaux de haute qualité pour garantir une installation durable et sécuritaire, en respectant les normes les plus strictes.</p> 
+            <p style="text-align: left;"><u>Maintenance et dépannage:</u></p>
+            <p style="text-align: left;">Des pannes imprévues ? Pas de panique ! Nos électriciens sont là pour vous aider. Nous proposons des services de dépannage rapide et efficace, en veillant à ce que votre système électrique fonctionne parfaitement, que ce soit pour une maison ou une entreprise. Nous intervenons dans les plus brefs délais avec le sourire !</p>
+            <p style="text-align: left;"><u>Mise aux normes:</u></p>
+            <p style="text-align: left;">La sécurité de votre installation est primordiale. Nous offrons un service de mise aux normes pour s’assurer que votre installation électrique respecte les standards en vigueur, vous garantissant ainsi une protection optimale pour vous et vos proches.</p>
+            <p style="text-align: left;"><u> Éclairage extérieur et décoration lumineuse :</u></p>
+            <p style="text-align: left;">Apportez de l’ambiance à vos extérieurs grâce à notre expertise en éclairage extérieur. Nous concevons des solutions lumineuses créatives et écoénergétiques pour sublimer votre jardin, terrasse ou façade, tout en réduisant votre empreinte énergétique.</p>
+            <p style="text-align: left;"><u>Conseil et expertise personnalisée:</u></p>
+            <p style="text-align: left;">Chez CPL Électrique Inc., chaque projet est unique ! Nous vous offrons des conseils personnalisés pour optimiser vos installations électriques, améliorer votre consommation d’énergie et répondre à vos besoins spécifiques.</p>
+            <p style="text-align: left; font-size: 20px;">Notre équipe joyeuse et enthousiaste est prête à vous accompagner dans tous vos projets électriques, en apportant des solutions sur mesure et en vous assurant une expérience agréable et fiable. Nous faisons de chaque intervention une occasion de montrer notre amour pour notre métier, et cela se reflète dans la qualité de notre travail.</p>
         </section>
         <section id="realisation" class="realisation">
             <h2>Nos Réalisations</h2>
@@ -334,3 +344,4 @@ cursor: pointer; /* Add cursor pointer to indicate it's clickable */
     </script>
 </body>
 </html>
+
