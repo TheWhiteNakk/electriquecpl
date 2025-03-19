@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPL Électrique Inc.</title>
+    <title>Contact - CPL Électrique Inc.</title>
     <style>
         body {
             font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url(background\ cpl\ site\ web.jpg)
+            background-image: url('background%20cpl%20site%20web.jpg');
         }
         header {
             background: linear-gradient(to right, #000000, #333);
@@ -19,6 +19,7 @@
             font-size: 24px;
             font-weight: bold;
             position: relative;
+            padding-left: 120px; /* Ensure space for the logo */
         }
         .logo {
             position: absolute;
@@ -75,30 +76,75 @@
             border: none;
             border-radius: 5px;
         }
-    </style></head>
+        @media (max-width: 768px) {
+            header {
+                padding-left: 15px; /* Adjust padding for smaller screens */
+                padding-right: 15px; /* Ensure proper spacing */
+            }
+            .logo {
+                height: 80px; /* Adjust logo size for smaller screens */
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
 <body>
     <header>
         <a href="site internet cpl.html">
-            <img src="logo cpl.png" alt="Logo CPL Électrique" class="logo">
+            <img src="logo%20cpl.png" alt="Logo CPL Électrique" class="logo">
         </a>
         CPL Électrique Inc.
     </header>
     <nav>
-        <a href="nos service.html">Nos Services</a>
-        <a href="nos service.html">À Propos</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Accueil</a>
+        <a href="nos%20service.html">Nos Services</a>
+        <a href="a%20propos.html">À Propos</a>
     </nav>
-</div class="container">
-<section id="services" class="services" style="text-align: center;">
-    <h2>Informations</h2>
-    <h2 style="font-size: 18px; text-align: center;">Président et Maitre Électricien : Pierre-Luc Sleigher</h2>
-    <p style="font-size: 18px; text-align: center;">Courriel: <button onclick="window.location.href='mailto:info@cplelectrique.com'">info@cplelectrique.com</button></p>
-    <p style="font-size: 18px; text-align: center;">Téléphone: <button onclick="window.location.href='tel:+1 514-885-5407'">+1(514) 885-5407</button></p>
-    <p style="font-size: 18px; text-align: center;">Localisation: <button onclick="window.location.href='https://www.google.com/maps?q=CPL+Électrique+Inc.'">9140 Rue Alexandre-Tassé, Mirabel, Qc J7N 0G1</button></p>
-</section>
-</section>
+    <div class="container">
+        <section id="contact" class="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <br>
+                <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+                <br>
+                <textarea id="message_questions" name="message_questions" placeholder="Votre message ou question" required></textarea>
+                <br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                emailjs.init("NBeFlwIcgKcdLJyYV");
+        
+                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+        
+                    emailjs.send("service_z6t9inm", "template_ipq00mf", {
+                        nom: document.getElementById("nom").value,
+                        email: document.getElementById("email").value,
+                        telephone: document.getElementById("telephone").value,
+                        message: document.getElementById("message_questions").value
+                    }).then(
+                        function(response) {
+                            alert("Message envoyé avec succès !");
+                        },
+                        function(error) {
+                            alert("Erreur lors de l'envoi du message.");
+                            console.error("EmailJS Error:", error);
+                        }
+                    );
+                });
+            });
+        </script>
+    </div>
     <footer>
         &copy; 2025 CPL Électrique Inc. - Tous droits réservés.
     </footer>
+</body>
+</html>
+
 </body>
 </html>
