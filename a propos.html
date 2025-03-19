@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPL Électrique Inc.</title>
+    <title>À Propos - CPL Électrique Inc.</title>
     <style>
         body {
-            font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: Arial, Impact,'Arial Narrow Bold', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url(background\ cpl\ site\ web.jpg)
+            background-image: url('background%20cpl%20site%20web.jpg');
         }
         header {
             background: linear-gradient(to right, #000000, #333);
@@ -19,6 +19,7 @@
             font-size: 24px;
             font-weight: bold;
             position: relative;
+            padding-left: 120px; /* Ensure space for the logo */
         }
         .logo {
             position: absolute;
@@ -88,18 +89,27 @@ cursor: pointer; /* Add cursor pointer to indicate it's clickable */
         .email-button:hover {
             background: #0056b3;
         }
+        @media (max-width: 768px) {
+            header {
+                padding-left: 15px; /* Adjust padding for smaller screens */
+                padding-right: 15px; /* Ensure proper spacing */
+            }
+            .logo {
+                height: 80px; /* Adjust logo size for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-<a href="site internet cpl.html">
-        <img src="logo cpl.png" alt="Logo CPL Électrique" class="logo">
+<a href="index.html">
+        <img src="logo%20cpl.png" alt="Logo CPL Électrique" class="logo">
 </a>
         CPL Électrique Inc.
     </header>
     <nav>
-        <a href="nos service.html">Nos Services</a>
-        <a href="a propos.html">À Propos</a>
+        <a href="nos%20service.html">Nos Services</a>
+        <a href="a%20propos.html">À Propos</a>
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
