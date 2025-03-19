@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPL Électrique Inc.</title>
+    <style>
+        body {
+            font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(background\ cpl\ site\ web.jpg)
+        }
+        header {
+            background: linear-gradient(to right, #000000, #333);
+            color: white;
+            padding: 42px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 15px;
+            top: 5px;
+            height: 100px;
+cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right,#ff6600,#cc5500) ;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .services, .about, .contact {
+            margin: 20px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        .realisation {
+            width: 55%;
+            margin: 20px auto;
+            padding: 10px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+        }
+        .realisation h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #cc5500;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+.email-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px; /* Add some space between input and button */
+        }
+        .email-button:hover {
+            background: #0056b3;
+        }
+        .diaporama {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            cursor: pointer;
+        }
+        .diaporama img {
+            width: 100%;
+            display: none;
+        }
+        .diaporama img.active {
+            display: block;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        .fullscreen img {
+            width: 80%;
+        }
+        .fullscreen.active {
+            display: flex;
+        }
+        .fullscreen-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 10;
+        }
+        .fullscreen-single {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        .fullscreen-single img {
+            width: 80%;
+        }
+        .fullscreen-single.active {
+            display: flex;
+        }
+        .close-fullscreen {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 30;
+        }
+        .fullscreen-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 30;
+        }
+        .fullscreen-arrow.left {
+            left: 10px;
+        }
+        .fullscreen-arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+<a href="site internet cpl.html">
+        <img src="logo cpl.png" alt="Logo CPL Électrique" class="logo">
+</a>
+        CPL Électrique Inc.
+    </header>
+    <nav>
+        <a href="nos service.html">Nos Services</a>
+        <a href="a propos.html">À Propos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="services" class="services">
+            <h2>Nos Services</h2>
+            <p style="text-align: left; font-size: 20px;">Chez CPL Électrique Inc., nous croyons que l’électricité ne se résume pas seulement à des câbles et des interrupteurs : c’est un art qui alimente nos vies et façonne nos espaces. Passionnés par notre métier, nous nous engageons à offrir des services de qualité supérieure, dans la joie et le respect de nos clients.</p>
+               <p style="text-align: left;"><u>Installation électrique:</u></p>
+                 <p style="text-align: left;">Que ce soit pour une nouvelle construction ou une rénovation, nous assurons l’installation de vos systèmes électriques avec soin et précision. Nous travaillons avec des matériaux de haute qualité pour garantir une installation durable et sécuritaire, en respectant les normes les plus strictes.</p> 
+                 <p style="text-align: left;"><u>Maintenance et dépannage:</u></p>
+                 <p style="text-align: left;">Des pannes imprévues ? Pas de panique ! Nos électriciens sont là pour vous aider. Nous proposons des services de dépannage rapide et efficace, en veillant à ce que votre système électrique fonctionne parfaitement, que ce soit pour une maison ou une entreprise. Nous intervenons dans les plus brefs délais avec le sourire !</p>
+                 <p style="text-align: left;"><u>Mise aux normes:</u></p>
+                 <p style="text-align: left;">La sécurité de votre installation est primordiale. Nous offrons un service de mise aux normes pour s’assurer que votre installation électrique respecte les standards en vigueur, vous garantissant ainsi une protection optimale pour vous et vos proches.</p>
+                 <p style="text-align: left;"><u> Éclairage extérieur et décoration lumineuse :</u></p>
+                 <p style="text-align: left;">Apportez de l’ambiance à vos extérieurs grâce à notre expertise en éclairage extérieur. Nous concevons des solutions lumineuses créatives et écoénergétiques pour sublimer votre jardin, terrasse ou façade, tout en réduisant votre empreinte énergétique.</p>
+                 <p style="text-align: left;"><u>Conseil et expertise personnalisée:</u></p>
+                 <p style="text-align: left;">Chez CPL Électrique Inc., chaque projet est unique ! Nous vous offrons des conseils personnalisés pour optimiser vos installations électriques, améliorer votre consommation d’énergie et répondre à vos besoins spécifiques.</p>
+                 <p style="text-align: left; font-size: 20px;">Notre équipe joyeuse et enthousiaste est prête à vous accompagner dans tous vos projets électriques, en apportant des solutions sur mesure et en vous assurant une expérience agréable et fiable. Nous faisons de chaque intervention une occasion de montrer notre amour pour notre métier, et cela se reflète dans la qualité de notre travail.</p>
+        </section>
+        <section id="realisation" class="realisation">
+            <h2>Nos Réalisations</h2>
+            <div class="diaporama">
+                <button class="arrow left" onclick="prevImage(event)">&#10094;</button>
+                <img src="1.jpg" alt="Image 1" class="active">
+                <button class="fullscreen-icon" onclick="toggleSingleFullscreen(event, 0)">&#x26F6;</button>
+                <img src="2.jpg" alt="Image 2">
+                <button class="fullscreen-icon" onclick="toggleSingleFullscreen(event, 1)">&#x26F6;</button>
+                <img src="3.jpg" alt="Image 3">
+                <button class="fullscreen-icon" onclick="toggleSingleFullscreen(event, 2)">&#x26F6;</button>
+                <button class="arrow right" onclick="nextImage(event)">&#10095;</button>
+            </div>
+        </section>
+        <div class="fullscreen" onclick="toggleFullscreen()">
+            <img src="1.jpg" alt="Image 1" class="active">
+            <img src="2.jpg" alt="Image 2">
+            <img src="3.jpg" alt="Image 3">
+        </div>
+        <div class="fullscreen-single">
+            <button class="close-fullscreen" onclick="toggleSingleFullscreen(event)">&#10006;</button>
+            <button class="fullscreen-arrow left" onclick="prevFullscreenImage(event)">&#10094;</button>
+            <img src="1.jpg" alt="Image 1">
+            <img src="2.jpg" alt="Image 2">
+            <img src="3.jpg" alt="Image 3">
+            <button class="fullscreen-arrow right" onclick="nextFullscreenImage(event)">&#10095;</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 CPL Électrique Inc. - Tous droits réservés.
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.diaporama img');
+        const fullscreenImages = document.querySelectorAll('.fullscreen img');
+        const fullscreen = document.querySelector('.fullscreen');
+        const fullscreenSingle = document.querySelector('.fullscreen-single');
+        const fullscreenSingleImages = document.querySelectorAll('.fullscreen-single img');
+
+        function showImage(index) {
+            images[currentIndex].classList.remove('active');
+            fullscreenImages[currentIndex].classList.remove('active');
+            currentIndex = (index + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+            fullscreenImages[currentIndex].classList.add('active');
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            showImage(currentIndex + 1);
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            showImage(currentIndex - 1);
+        }
+
+        function toggleFullscreen() {
+            fullscreen.classList.toggle('active');
+        }
+
+        function toggleSingleFullscreen(event, index) {
+            event.stopPropagation();
+            fullscreenSingle.classList.toggle('active');
+            fullscreenSingleImages.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextFullscreenImage(event) {
+            event.stopPropagation();
+            const currentImage = fullscreenSingle.querySelector('img[style*="block"]');
+            let currentIndex = Array.from(fullscreenSingleImages).indexOf(currentImage);
+            currentIndex = (currentIndex + 1) % fullscreenSingleImages.length;
+            fullscreenSingleImages.forEach((img, i) => {
+                img.style.display = i === currentIndex ? 'block' : 'none';
+            });
+        }
+
+        function prevFullscreenImage(event) {
+            event.stopPropagation();
+            const currentImage = fullscreenSingle.querySelector('img[style*="block"]');
+            let currentIndex = Array.from(fullscreenSingleImages).indexOf(currentImage);
+            currentIndex = (currentIndex - 1 + fullscreenSingleImages.length) % fullscreenSingleImages.length;
+            fullscreenSingleImages.forEach((img, i) => {
+                img.style.display = i === currentIndex ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

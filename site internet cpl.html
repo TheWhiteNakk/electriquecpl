@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPL Électrique Inc.</title>
+    <style>
+        body {
+            font-family: Arial, Impact,'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(background\ cpl\ site\ web.jpg)
+        }
+        header {
+            background: linear-gradient(to right, #000000, #333);
+            color: white;
+            padding: 42px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 15px;
+            top: 5px;
+            height: 100px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right,#ff6600,#cc5500) ;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .services, .about, .contact {
+            margin: 20px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #cc5500;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo cpl.png" alt="Logo CPL Électrique" class="logo">
+        CPL Électrique Inc.
+    </header>
+    <nav>
+        <a href="nos service.html">Nos Services</a>
+        <a href="a propos.html">À Propos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="services" class="services">
+           <p style="font-size: 24px; font-weight: bold;">Bonjour et Bienvenue sur le site web de CPL Électrique Inc.</p>
+</p> Nous sommes ravis de vous accueillir ici ! Chez CPL Électrique Inc., notre priorité est de fournir des services électriques de qualité avec professionnalisme et enthousiasme. Notre équipe dynamique est dédiée à répondre à tous vos besoins, que ce soit pour une installation, un dépannage ou un conseil personnalisé.
+           <p style="font-size: 24px; font-weight: bold;">Communiquer avec nous, cela nous fera un plaisir de vous répondre.</p>
+           <p>Que vous ayez des questions sur nos services, besoin d'une estimation, ou que vous souhaitiez simplement en savoir plus sur notre entreprise, n'hésitez pas à nous contacter. Nous serons heureux de vous offrir des solutions adaptées à vos besoins et de vous accompagner dans vos projets électrique.</p>
+        </section>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <br>
+                <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+                <br>
+                <textarea id="message_questions" name="message_questions" placeholder="Votre message ou question" required></textarea>
+                <br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                emailjs.init("NBeFlwIcgKcdLJyYV");
+        
+                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+        
+                    emailjs.send("service_z6t9inm", "template_ipq00mf", {
+                        nom: document.getElementById("nom").value,
+                        email: document.getElementById("email").value,
+                        telephone: document.getElementById("telephone").value,
+                        message: document.getElementById("message_questions").value
+                    }).then(
+                        function(response) {
+                            alert("Message envoyé avec succès !");
+                        },
+                        function(error) {
+                            alert("Erreur lors de l'envoi du message.");
+                            console.error("EmailJS Error:", error);
+                        }
+                    );
+                });
+            });
+        </script>
+    </div>
+    <footer>
+        &copy; 2025 CPL Électrique Inc. - Tous droits réservés.
+    </footer>
+</body>
+</html>
