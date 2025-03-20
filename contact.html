@@ -103,12 +103,19 @@
     <div class="container">
         <section id="contact" class="contact">
             <h2>Contactez-nous</h2>
+            <p>Pour toute question ou demande de service, vous pouvez nous contacter via les moyens suivants :</p>
+            <button onclick="window.location.href='tel:+15148855407'">Appeler</button>
+            <button onclick="window.location.href='mailto:info@cplelectrique.com'">Envoyer un Email</button>
+            <button onclick="window.location.href='sms:+15148855407'">Envoyer un SMS</button>
+            <p>Ou utilisez le formulaire ci-dessous :</p>
             <form id="contact-form">
                 <input type="text" id="nom" name="nom" placeholder="Nom" required>
                 <br>
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <br>
                 <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+                <br>
+                <input type="text" id="localisation" name="localisation" placeholder="Localisation" required>
                 <br>
                 <textarea id="message_questions" name="message_questions" placeholder="Votre message ou question" required></textarea>
                 <br>
@@ -126,6 +133,7 @@
                         nom: document.getElementById("nom").value,
                         email: document.getElementById("email").value,
                         telephone: document.getElementById("telephone").value,
+                        localisation: document.getElementById("localisation").value,
                         message: document.getElementById("message_questions").value
                     }).then(
                         function(response) {
@@ -145,6 +153,7 @@
     </footer>
 </body>
 </html>
+
 
 </body>
 </html>
